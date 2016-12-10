@@ -11,6 +11,8 @@ import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -20,12 +22,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class receive extends Fragment implements OnMapReadyCallback {
-
-
+    public LatLng marker;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_receive, container,false);
+        View vvv = inflater.inflate(R.layout.fragment_receive, container,false);
+        return vvv;
     }
 
     @Override
@@ -38,13 +40,13 @@ public class receive extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng marker = new LatLng(12.886982, 77.641395);
+        marker = new LatLng(12.886982, 77.641395);
         if (ContextCompat.checkSelfPermission(getActivity().getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(getActivity().getApplicationContext(), android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)
         {
             googleMap.setMyLocationEnabled(true);
         }
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 14));
-        googleMap.addMarker(new MarkerOptions().title("Hello Google Maps!").position(marker));
     }
+
 }

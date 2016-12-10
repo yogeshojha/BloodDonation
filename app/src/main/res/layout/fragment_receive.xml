@@ -5,15 +5,15 @@
     <fragment android:id="@+id/map"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        class="com.google.android.gms.maps.MapFragment"></fragment>
-   <ImageView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="bottom|end"
-       android:layout_margin="20dp"
-       android:layout_marginBottom="10dp"
-       android:padding="1dp"
-       android:background="#fff"
-       android:src="@drawable/ic_maps_my_location"
-       />
+        class="com.google.android.gms.maps.MapFragment">
+    <Button
+        android:id="@+id/btngps"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:drawableRight="@drawable/ic_gps_fixed_black_24dp"
+         />
+    </fragment>
+
 </FrameLayout>
