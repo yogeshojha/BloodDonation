@@ -7,36 +7,36 @@
             android:icon="@drawable/cat1"
             android:title="My Profile" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/receive"
+            android:icon="@drawable/drop"
             android:title="Receive Blood" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/donate"
+            android:icon="@drawable/doc"
             android:title="Donate Blood" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/event"
+            android:icon="@drawable/campaign"
             android:title="Organize Campaign" />
         <item
             android:id="@+id/leader"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/trophy"
             android:title="Leaderboard" />
         <item
-            android:id="@+id/info"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/information"
+            android:icon="@drawable/info"
             android:title="Information" />
     </group>
 
     <item android:title="Others">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/about"
+                android:icon="@drawable/support"
                 android:title="About" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:id="@+id/logout"
+                android:icon="@drawable/logout"
                 android:title="Logout" />
         </menu>
     </item>

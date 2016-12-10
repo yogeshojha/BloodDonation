@@ -1,5 +1,6 @@
 package com.yogeshojha.blooddonation;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,17 +21,11 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.fragment_container, new receive()).commit();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -79,20 +74,39 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        FragmentManager fm = getFragmentManager();
         if (id == R.id.my_profile) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            fm.beginTransaction().replace(R.id.fragment_container, new profile()).commit();
+        }
+        else if(id == R.id.receive)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container, new receive()).commit();
+        }
+        else if(id == R.id.donate)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container, new donate()).commit();
+        }
 
-        } else if (id == R.id.nav_slideshow) {
+        else if(id == R.id.event)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container, new campaign()).commit();
+        }
 
-        } else if (id == R.id.nav_manage) {
+        else if(id == R.id.leader)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container, new leaderboard()).commit();
+        }
 
-        } else if (id == R.id.nav_share) {
+        else if(id == R.id.information)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container, new information()).commit();
+        }
 
-        } else if (id == R.id.nav_send) {
+        else if(id == R.id.logout)
+        {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
