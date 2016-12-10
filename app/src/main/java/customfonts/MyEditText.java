@@ -1,4 +1,4 @@
-package custom_font;
+package customfonts;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -8,7 +8,7 @@ import android.widget.EditText;
 /**
  * Created by one on 3/12/15.
  */
-public class MyEditText extends EditText{
+public class MyEditText extends EditText {
 
     public MyEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -27,7 +27,7 @@ public class MyEditText extends EditText{
 
     private void init() {
         if (!isInEditMode()) {
-            Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Regular.ttf");
+            Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Light.ttf");
             setTypeface(tf);
         }
     }

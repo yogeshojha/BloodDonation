@@ -1,4 +1,4 @@
-package custom_font;
+package customfonts;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -27,7 +27,7 @@ public class MyTextView extends TextView {
 
     private void init() {
         if (!isInEditMode()) {
-            Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Regular.ttf");
+            Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Light.ttf");
             setTypeface(tf);
         }
     }
