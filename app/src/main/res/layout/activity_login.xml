@@ -13,7 +13,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/studentbg"
+        android:background="@drawable/hosp"
         android:scaleType="centerCrop"
 
         >
@@ -31,49 +31,16 @@
             android:id="@+id/head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registration"
+            android:text="The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one or even YOU!"
             android:textColor="#4c565f"
             android:textSize="29dp"
             android:gravity="center"
 
             />
-        <customfonts.MyTextView
-            android:id="@+id/hha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Step 1"
-            android:textColor="#4c565f"
-            android:textSize="20dp"
-            android:gravity="center"
-
-            />
 
 
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorhint"
-            android:textColor="@color/colortext">
 
-            <customfonts.MyEditText
-
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"
-                android:layout_marginLeft="46dp"
-                android:textColorHint="@color/colorhint"
-                android:textColor="@color/colortext"
-                android:maxLength="12"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="left"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="12dp"
-                />
-        </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/email1"
             android:layout_width="match_parent"
@@ -96,7 +63,11 @@
                 android:gravity="left"
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="12dp"
+
+
+
                 />
+
         </android.support.design.widget.TextInputLayout>
 
         <View
@@ -144,13 +115,40 @@
             android:background="#59d58d"/>
 
         <LinearLayout
-           android:layout_marginTop="12dp"
+            android:layout_marginTop="12dp"
             android:id="@+id/linear4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
 
             >
+
+            <CheckBox
+                android:layout_weight="2"
+                android:id="@+id/remember"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:checked="false"
+                android:buttonTint="@color/colorhint"
+                android:textColor="@color/colorhint"
+                android:layout_marginLeft="60dp"
+                android:textSize="11dp"
+
+
+                />
+            <customfonts.MyTextView
+                android:layout_weight="2.3"
+                android:id="@+id/forgotpass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Forgot password?"
+                android:textColor="@color/colorhint"
+                android:layout_gravity="center"
+                android:textSize="11dp"
+
+                />
+
 
         </LinearLayout>
 
@@ -164,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rect1"
-            android:text="Sign Up"
+            android:text="Sign in"
             android:textSize="16dp"
             android:textColor="#fff"
             android:gravity="center"
@@ -174,8 +172,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="11dp"
             android:elevation="3dp"
-            android:clickable="true"
-            android:onClick="sgn2"
+
+
+
+
             />
 
 
@@ -209,7 +209,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-android:layout_marginBottom="16dp"
+        android:layout_marginBottom="16dp"
         >
 
         <LinearLayout

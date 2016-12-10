@@ -14,23 +14,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/wwww"
+        android:background="@drawable/spl"
         >
-
-        <!--<customfonts.MyTextView-->
-        <!--android:id="@+id/head"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Welcome"-->
-        <!--android:textColor="#000"-->
-        <!--android:textSize="34dp"-->
-        <!--android:gravity="center"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--/>-->
-
-
-
-
 
 
     </FrameLayout>
@@ -60,7 +45,6 @@
             <customfonts.MyTextView
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:id="@+id/student"
                 android:textSize="23dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,13 +53,14 @@
                 android:background="@drawable/rect"
                 android:padding="10dp"
                 android:gravity="center"
+                android:clickable="true"
+                android:onClick="signupst"
                 />
 
 
             <customfonts.MyTextView
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:id="@+id/teacher"
                 android:textSize="23dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,6 +69,8 @@
                 android:background="@drawable/rect2"
                 android:padding="10dp"
                 android:gravity="center"
+                android:clickable="true"
+                android:onClick="loginst"
                 />
         </LinearLayout>
     </LinearLayout>

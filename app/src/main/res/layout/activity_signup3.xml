@@ -279,7 +279,6 @@
                     </LinearLayout>
                 </LinearLayout>
                 <customfonts.MyTextView
-                    android:id="@+id/getloc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rect2"
@@ -293,7 +292,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:elevation="3dp"
-                    android:onClick="getlocation"
+                    android:onClick="mainpg"
                     android:clickable="true"
                     />
             </LinearLayout>

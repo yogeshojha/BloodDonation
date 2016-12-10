@@ -95,4 +95,9 @@ public class signup2 extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+    public void sgn3(View v)
+    {
+        Intent iinent= new Intent(signup2.this,signup3.class);
+        startActivity(iinent);
+    }
 }
