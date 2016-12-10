@@ -48,8 +48,8 @@ public class receive extends Fragment implements OnMapReadyCallback {
         {
             googleMap.setMyLocationEnabled(true);
         }
-        googleMap.setMapType(1);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 14));
+        googleMap.getUiSettings().setMyLocationButtonEnabled(false);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
     }
 
 }

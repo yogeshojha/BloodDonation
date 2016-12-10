@@ -32,7 +32,8 @@
         android:layout_height="wrap_content"
         android:text="yogesh@linux.com"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    <customfonts.MyTextView
+    <Button
+        android:id="@+id/btnedit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rctsmall"
@@ -46,8 +47,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="11dp"
         android:elevation="3dp"
-        android:clickable="true"
-        android:onClick=""
         />
 
 </LinearLayout>

@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/banner1" />
+                    android:src="@drawable/cover" />
 
 
 
@@ -64,15 +64,16 @@
                 <customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tom Cruise"
-                    android:textSize="22dp"
+                    android:text="Yogesh Ojha"
+                    android:textSize="25dp"
                     android:textColor="@color/title_color"
                     android:layout_gravity="center"/>
 
                 <customfonts.MyTextView
+                    android:textAlignment="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Syracuse, New York"
+                    android:text="Hosur Rd, Wellington Paradise, Singasandra, Bengaluru, Karnataka 560068"
                     android:layout_gravity="center"
                     android:textColor="@color/title_color"
                     android:textSize="14dp"/>
@@ -80,50 +81,24 @@
                 <customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="--------"
+                    android:text="Unlocked the PRO Badge"
                     android:textSize="14dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:drawableTop="@drawable/pro"
                     android:layout_gravity="center"/>
-
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Stars can't shine without darkness..."
-                    android:textSize="14dp"
-                    android:layout_gravity="center"/>
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Life can't shine without pain..."
-                    android:textSize="14dp"
-                    android:layout_gravity="center"/>
-
-
 
             </LinearLayout>
-
-
-
-
-
-
-            <TextView
+=            <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
                 android:text="EDIT PROFILE"
                 android:textColor="@color/edit_profile"
                 android:textAlignment="center"
                 android:background="@drawable/rounded"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 />
-
-
-
 
             <View
                 android:layout_width="match_parent"
@@ -147,7 +122,7 @@
                     <customfonts.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="256"
+                        android:text="13"
                         android:textColor="@color/title_color"
                         android:textStyle="bold"
                         android:textSize="18dp" />
@@ -155,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Likes"
+                        android:text="Times Donated"
                         android:textSize="14dp"/>
 
                 </LinearLayout>
@@ -176,7 +151,7 @@
                     <customfonts.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2,080"
+                        android:text="3"
                         android:textColor="@color/title_color"
                         android:textStyle="bold"
                         android:textSize="18dp" />
@@ -184,7 +159,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Followers"
+                        android:text="Lives Saved"
                         android:textSize="14dp"/>
 
                 </LinearLayout>
@@ -205,7 +180,7 @@
                     <customfonts.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="144"
+                        android:text="5"
                         android:textColor="@color/title_color"
                         android:textStyle="bold"
                         android:textSize="18dp" />
@@ -213,43 +188,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Following"
+                        android:text="LeaderBoard Rank"
                         android:textSize="14dp"/>
 
                 </LinearLayout>
-
-
 
 
             </LinearLayout>
-
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-                android:background="#ACACAC" />
-
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/olegimage" />
-
-
-
-
-            </RelativeLayout>
-
-
+                android:background="#ACACAC"
+                android:layout_marginTop="1dp"/>
         </LinearLayout>
 
 
@@ -258,85 +208,6 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bottom_black_bgcolor"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:gravity="center">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_favorite" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_social_media" />
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_icon"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_photo" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_hand" />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 
 
