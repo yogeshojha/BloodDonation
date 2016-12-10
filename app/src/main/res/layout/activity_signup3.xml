@@ -12,7 +12,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@drawable/girl"
+            android:background="@drawable/blood"
             android:scaleType="centerCrop"
 
             >
@@ -50,9 +50,252 @@
                         android:textColor="#F44336"
                         android:textSize="25dp"
                         android:gravity="center"
-
                         />
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Select if you have any of the following health problems."
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        android:gravity="left"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Malaria"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hepatitis C"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
+                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Syphilis"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hepatitis B"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="HIV"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="HTLV"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="T-Cruzi"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Diabities"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="High Blood Pressure"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Low Blood Pressure"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <CheckBox
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Have you donated blood before?"
+                            android:checked="false"
+                            android:buttonTint="@color/colorhint"
+                            android:textColor="@color/colorhint"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="11dp"
+
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <customfonts.MyTextView
+                    android:id="@+id/getloc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect2"
+                    android:text="Complete the signup Process"
+                    android:textSize="16dp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="3dp"
+                    android:onClick="getlocation"
+                    android:clickable="true"
+                    />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

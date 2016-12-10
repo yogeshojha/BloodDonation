@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ws.wolfsoft.creative.MainActivity"
+    android:background="#fff">
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome"
+        >
+
+        <!--<customfonts.MyTextView-->
+        <!--android:id="@+id/head"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Welcome"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="34dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--/>-->
+
+
+
+
+
+
+    </FrameLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="60dp">
+
+
+        <customfonts.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Get connected with"
+            android:lines="1"
+
+            android:textColor="#9d9ea0"
+            android:gravity="center"
+
+            />
+
+        <customfonts.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="the best University"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingBottom="21dp"
+            android:textColor="#9d9ea0"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            >
+
+
+            <customfonts.MyTextView
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:id="@+id/student"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:textColor="#fff"
+                android:background="@drawable/rect"
+                android:padding="10dp"
+                android:gravity="center"
+                />
+
+
+            <customfonts.MyTextView
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:id="@+id/teacher"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teacher"
+                android:textColor="#fff"
+                android:background="@drawable/rect2"
+                android:padding="10dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
