@@ -22,6 +22,7 @@ import customfonts.MyTextView;
 public class signup2 extends AppCompatActivity {
     private Boolean flag = false;
     public  ProgressBar pb;
+    public MyEditText locationinp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class signup2 extends AppCompatActivity {
                 R.array.blood_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        MyEditText location = (MyEditText) findViewById(R.id.inploc);
+        locationinp = (MyEditText) findViewById(R.id.inploc);
         MyTextView getloc = (MyTextView) findViewById(R.id.getloc);
         pb = (ProgressBar) findViewById(R.id.progressBar1);
         pb.setVisibility(View.INVISIBLE);
@@ -46,6 +47,7 @@ public class signup2 extends AppCompatActivity {
                 @Override
                 public void run() {
                     pb.setVisibility(View.INVISIBLE);
+                    locationinp.setText("Hosur Rd, Wellington Paradise, Singasandra, Bengaluru, Karnataka 560068");
                 }
             }, 2500);
         }

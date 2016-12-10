@@ -2,13 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#fff"
     >
-
-
-
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/man1"
+        android:scaleType="centerCrop"
+
+        >
+    </FrameLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
         android:layout_above="@+id/linear3"
         android:id="@+id/linear"
         android:layout_width="match_parent"
@@ -82,21 +98,31 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorhint"
             android:textColor="@color/colortext">
-
-            <customfonts.MyEditText
-                android:id="@+id/inploc"
-                android:textSize="16dp"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Location"
-                android:layout_marginLeft="46dp"
-                android:layout_marginRight="46dp"
-                android:textColorHint="@color/colorhint"
-                android:textColor="@color/colortext"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="left"
-                />
+                android:layout_height="wrap_content">
+                <customfonts.MyEditText
+                    android:id="@+id/inploc"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginRight="46dp"
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    />
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+
             <customfonts.MyTextView
                 android:id="@+id/getloc"
                 android:layout_width="match_parent"
@@ -188,16 +214,7 @@
 
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layloadingH"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20"
-        android:layout_width="fill_parent"
-        android:gravity="center">
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:id="@+id/progressBar1"
-            android:layout_height="wrap_content"></ProgressBar>
+    </LinearLayout>
+    </ScrollView>
     </LinearLayout>
 </RelativeLayout>
