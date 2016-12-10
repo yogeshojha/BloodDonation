@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -23,17 +24,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class receive extends Fragment implements OnMapReadyCallback {
     public LatLng marker;
+    public TextView txt;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View vvv = inflater.inflate(R.layout.fragment_receive, container,false);
-        return vvv;
+
+        View v = inflater.inflate(R.layout.fragment_receive, container,false);
+        return  v;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         MapFragment fragment = (MapFragment)getChildFragmentManager().findFragmentById(R.id.map);
         fragment.getMapAsync(this);
     }
@@ -46,6 +48,7 @@ public class receive extends Fragment implements OnMapReadyCallback {
         {
             googleMap.setMyLocationEnabled(true);
         }
+        googleMap.setMapType(1);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 14));
     }
 

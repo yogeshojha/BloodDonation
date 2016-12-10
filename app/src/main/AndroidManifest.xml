@@ -32,7 +32,7 @@
         <activity
             android:name=".signup3"
             android:noHistory="true" />
-        <!-- <activity android:name=".MainActivity" /> -->
+         <!--<activity android:name=".MainActivity" />-->
         <activity
             android:name=".login"
             android:noHistory="true" />
@@ -47,7 +47,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
     </application>
 
 </manifest>
