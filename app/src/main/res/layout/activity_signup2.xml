@@ -13,7 +13,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/studentbg"
+        android:background="@drawable/signup2"
         android:scaleType="centerCrop"
 
         >
@@ -27,23 +27,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <customfonts.MyTextView
-            android:id="@+id/head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registration"
-            android:textColor="#4c565f"
-            android:textSize="29dp"
-            android:gravity="center"
 
-            />
         <customfonts.MyTextView
             android:id="@+id/hha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Step 1"
+            android:text="Step 2"
             android:textColor="#4c565f"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:gravity="center"
 
             />
@@ -51,7 +42,7 @@
 
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/Name"
+            android:id="@+id/mob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorhint"
@@ -62,11 +53,11 @@
                 android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="Mobile Phone"
                 android:layout_marginLeft="46dp"
                 android:textColorHint="@color/colorhint"
                 android:textColor="@color/colortext"
-                android:maxLength="12"
+                android:maxLength="10"
                 android:background="#0000"
                 android:padding="16dp"
                 android:gravity="left"
@@ -75,22 +66,44 @@
                 />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/email1"
+            android:id="@+id/dob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorhint"
             android:textColor="@color/colortext">
 
             <customfonts.MyEditText
-
                 android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="Date of Birth (DD/MM/YYYY)"
                 android:layout_marginLeft="46dp"
                 android:textColorHint="@color/colorhint"
                 android:textColor="@color/colortext"
-                android:maxLength="12"
+                android:maxLength="10"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="left"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="12dp"
+                />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorhint"
+            android:textColor="@color/colortext">
+
+            <customfonts.MyEditText
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:layout_marginLeft="46dp"
+                android:textColorHint="@color/colorhint"
+                android:textColor="@color/colortext"
+                android:maxLength="10"
                 android:background="#0000"
                 android:padding="16dp"
                 android:gravity="left"
@@ -105,35 +118,21 @@
             android:layout_marginRight="56dp"
             android:layout_height="1dp"
             android:background="#59d58d"/>
-
-
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/bloodtype"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorhint"
             android:textColor="@color/colortext">
 
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:id="@+id/blood_spinner"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="40dp"
+                android:layout_height="50dp" />
 
-
-            <customfonts.MyEditText
-
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:layout_marginLeft="46dp"
-                android:layout_marginRight="46dp"
-                android:textColorHint="@color/colorhint"
-                android:textColor="@color/colortext"
-                android:background="#0000"
-                android:padding="16dp"
-                android:inputType="textPassword"
-                android:drawableLeft="@drawable/pass"
-                android:drawablePadding="12dp"
-
-
-                />
         </android.support.design.widget.TextInputLayout>
 
         <View
@@ -144,7 +143,7 @@
             android:background="#59d58d"/>
 
         <LinearLayout
-           android:layout_marginTop="12dp"
+            android:layout_marginTop="12dp"
             android:id="@+id/linear4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -158,49 +157,7 @@
 
 
 
-        <customfonts.MyTextView
-
-            android:id="@+id/signin1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rect1"
-            android:text="Sign Up"
-            android:textSize="16dp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:padding="12dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="11dp"
-            android:elevation="3dp"
-
-            />
-
-
-
-        <customfonts.MyTextView
-            android:id="@+id/or"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="or"
-            android:layout_above="@+id/acc"
-            android:gravity="center"
-            android:lines="1"
-            android:textColor="@color/colorhint"
-            android:layout_marginBottom="5dp"
-
-
-            />
-
     </LinearLayout>
-
-
-
-
-
-
-
 
     <LinearLayout
         android:id="@+id/linear3"
@@ -208,54 +165,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-android:layout_marginBottom="16dp"
+        android:layout_marginBottom="16dp"
         >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:background="@drawable/rectfb"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-
-
-
-            >
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fb"
-                android:padding="12dp"
-
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:background="@drawable/rectgoogle"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-
-            >
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/google"
-                android:padding="12dp"
-
-                />
-
-        </LinearLayout>
-
-
 
 
     </LinearLayout>
