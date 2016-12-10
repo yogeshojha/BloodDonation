@@ -2,34 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/side_nav_bar"
-    android:gravity="bottom"
+    android:layout_height="280dp"
+    android:background="#2196F3"
+    android:paddingTop="16dp"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
+        android:src="@drawable/yog"
+        android:layout_gravity="center"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        android:layout_height="130dp"
+        />
 
     <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Android Studio"
+        android:paddingTop="2dp"
+        android:text="Yogesh Ojha"
+        android:textSize="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="android.studio@android.com" />
+        android:text="yogesh@linux.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rctsmall"
+        android:text="Edit Profile"
+        android:textSize="16dp"
+        android:textColor="#2196F3"
+        android:gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="11dp"
+        android:elevation="3dp"
+        android:clickable="true"
+        android:onClick=""
+        />
 
 </LinearLayout>

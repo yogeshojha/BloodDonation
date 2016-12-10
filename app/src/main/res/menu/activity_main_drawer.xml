@@ -3,33 +3,41 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/my_profile"
+            android:icon="@drawable/cat1"
+            android:title="My Profile" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Receive Blood" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Donate Blood" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Organize Campaign" />
+        <item
+            android:id="@+id/leader"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Leaderboard" />
+        <item
+            android:id="@+id/info"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Information" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Others">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="About" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Logout" />
         </menu>
     </item>
 
