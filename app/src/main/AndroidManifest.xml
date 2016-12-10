@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".signup"></activity> -->
-        <!-- <activity android:name=".signup2"></activity> -->
-        <!-- <activity android:name=".signup3"></activity> -->
-        <!--<activity android:name=".mainpage"></activity>-->
+         <activity android:name=".signup" android:noHistory="true"></activity>
+         <activity android:name=".signup2" android:noHistory="true"></activity>
+         <activity android:name=".signup3" android:noHistory="true"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
