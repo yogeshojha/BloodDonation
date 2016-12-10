@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="#F44336">
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="#fff"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:src="@drawable/backwardarrow"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/usericon"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/usericon"
+        android:layout_marginTop="70dp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/usericon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/camera"
+            android:layout_gravity="right"/>
+
+
+        <custom_font.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Cover Picture"
+            android:textColor="#fff"
+            android:textSize="14.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:letterSpacing="0.02"
+
+            />
+
+    </LinearLayout>
+
+    <custom_font.MyTextView
+        android:id="@+id/getstarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradiant"
+        android:padding="18dp"
+        android:text="GET STARTED"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:letterSpacing="0.1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="35dp"
+        />
+    <custom_font.MyTextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms and Condition"
+        android:textColor="#006efe"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <LinearLayout
+        android:layout_above="@+id/getstarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <custom_font.MyEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="User Name"
+                android:background="@drawable/border"
+                android:inputType="text"
+                android:textSize="15dp"
+                android:padding="16dp"
+                android:textColorHint="#73787b"
+                android:letterSpacing="0.02"/>
+
+            <custom_font.MyEditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:background="@drawable/border"
+                android:layout_marginLeft="7dp"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:textColorHint="#73787b"
+                android:letterSpacing="0.02"/>
+        </LinearLayout>
+
+
+        <custom_font.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:background="@drawable/border"
+            android:inputType="textPassword"
+            android:textSize="15dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#73787b"
+            android:letterSpacing="0.02"/>
+
+
+        <custom_font.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Confirm Password"
+            android:background="@drawable/border"
+            android:inputType="textPassword"
+            android:textSize="15dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#73787b"
+            android:letterSpacing="0.02"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:background="@drawable/border"
+
+
+                ></Spinner>
+
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/border"
+                android:textColor="@android:color/white"
+                ></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/border"></Spinner>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
