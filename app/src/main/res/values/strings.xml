@@ -7,14 +7,14 @@
     <string name="action_settings">Settings</string>
     <string-array name="blood_array">
         <item>Select Blood Type</item>
-        <item>A Positive</item>
-        <item>A Negative</item>
-        <item>B Positive</item>
-        <item>B Negative</item>
-        <item>AB Positive</item>
-        <item>AB Negative</item>
-        <item>O Positive</item>
-        <item>O Negative</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

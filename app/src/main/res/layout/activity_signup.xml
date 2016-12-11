@@ -51,14 +51,12 @@
 
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorhint"
             android:textColor="@color/colortext">
 
             <customfonts.MyEditText
-
                 android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +70,7 @@
                 android:gravity="left"
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="12dp"
-                />
+                android:id="@+id/name" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/email1"
