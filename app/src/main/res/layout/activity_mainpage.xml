@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="Signup"
                 android:textColor="#fff"
-                android:background="@drawable/rect"
+                android:background="@drawable/rect2"
                 android:padding="10dp"
                 android:gravity="center"
                 android:clickable="true"

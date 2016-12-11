@@ -129,6 +129,8 @@ public class signup2 extends AppCompatActivity {
         URL = "http://kyampus.in/blood/add.php?name="+aname+"&phone="+phone+"&location="+loctn+"&blood="+spn;
         System.out.println(URL);
         new RequestTask().execute(URL);
+        String URL_SMS = "http://kyampus.in/blood/sms.php?name="+aname+"&number="+phone;
+        new RequestTask().execute(URL_SMS);
         Intent iinent= new Intent(signup2.this,signup3.class);
         startActivity(iinent);
     }

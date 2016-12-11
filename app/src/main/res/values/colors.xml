@@ -8,4 +8,14 @@
     <color name="title_color">#000</color>
     <color name="edit_profile">#5F76BF</color>
     <color name="bottom_black_bgcolor">#90000000</color>
+    <color name="hotel_name">#fff</color>
+    <color name="total_hotel_num">#fff</color>
+    <color name="hotel_rate">#fff</color>
+    <color name="hotel_room_price">#fff</color>
+    <color name="payment_card_baground">#B7CE63</color>
+    <color name="payment_button">#04bebd</color>
+    <color name="city_name">#fff</color>
+    <color name="icons">#6e6e6e</color>
+    <color name="devider">#ebebeb</color>
+    <color name="text">#223038</color>
 </resources>
