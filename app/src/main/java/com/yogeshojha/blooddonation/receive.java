@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -11,7 +12,9 @@ import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,17 +23,32 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 
 public class receive extends Fragment implements OnMapReadyCallback {
     public LatLng marker;
-    public TextView txt;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View vvn = inflater.inflate(R.layout.fragment_receive, container, false);
+        Spinner spinner = (Spinner) vvn.findViewById(R.id.bld);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getActivity(),
+                R.array.blood_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner.setAdapter(adapter);
+        return vvn;
 
-        View v = inflater.inflate(R.layout.fragment_receive, container,false);
-        return  v;
     }
 
     @Override
@@ -51,5 +69,4 @@ public class receive extends Fragment implements OnMapReadyCallback {
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
     }
-
 }
