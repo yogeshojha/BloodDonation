@@ -37,7 +37,10 @@ import java.util.ArrayList;
 
 public class receive extends Fragment implements OnMapReadyCallback {
     public LatLng marker;
-
+    public TextView txt;
+    private String URL = "http://kyampus.in/blood/loc.php";
+    public final ArrayList<String> latarray = new ArrayList<String>();
+    public final ArrayList<String> lngarray = new ArrayList<String>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class receive extends Fragment implements OnMapReadyCallback {
                 R.array.blood_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
+        new FetchWebsiteData().execute();
         return vvn;
 
     }
@@ -54,10 +58,48 @@ public class receive extends Fragment implements OnMapReadyCallback {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    public class FetchWebsiteData extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        public void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
+        public Void doInBackground(Void... params) {
+            try {
+                // Connect to website
+                Document document = Jsoup.connect(URL).get();
+                latarray.clear();
+                lngarray.clear();
+                for (Element table : document.select("table.locationclass")) {
+                    for (Element row : table.select("tr")) {
+                        Elements tds = row.select("td");
+                        if (tds.size() >= 1) {
+                            lngarray.add(tds.get(2).text());
+                            latarray.add(tds.get(1).text());
+                        }
+
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+
+        }
+        public void onPostExecute(Void result) {
+            receive.this.postmarkers(latarray,lngarray);
+        }
+    }
+    public void postmarkers(ArrayList latarray, ArrayList lngarray)
+    {
         MapFragment fragment = (MapFragment)getChildFragmentManager().findFragmentById(R.id.map);
         fragment.getMapAsync(this);
     }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         marker = new LatLng(12.886982, 77.641395);
@@ -68,5 +110,14 @@ public class receive extends Fragment implements OnMapReadyCallback {
         }
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
+
+        int size = latarray.size();
+        for (int i = 0; i < size; i++)
+        {
+            Marker marker = googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(Double.parseDouble(latarray.get(i)), Double.parseDouble(lngarray.get(i))))
+                    .title("San Francisco")
+                    .snippet("Population: 776733"));
+        }
     }
 }

@@ -15,38 +15,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.maps.model.LatLng;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public FragmentManager fm;
-    public LatLng marker;
-    public TextView txt;
-    private String URL = "http://kyampus.in/blood/loc.php";
-    public final ArrayList<String> latarray = new ArrayList<String>();
-    public final ArrayList<String> lngarray = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new FetchWebsiteData().execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.fragment_container, new receive()).commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -126,43 +107,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public class FetchWebsiteData extends AsyncTask<Void, Void, Void> {
 
-        @Override
-        public void onPreExecute() {
-            super.onPreExecute();
-
-        }
-
-        @Override
-        public Void doInBackground(Void... params) {
-            try {
-                // Connect to website
-                Document document = Jsoup.connect(URL).get();
-                latarray.clear();
-                lngarray.clear();
-                for (Element table : document.select("table.locationclass")) {
-                    for (Element row : table.select("tr")) {
-                        Elements tds = row.select("td");
-                        if (tds.size() >= 1) {
-                            lngarray.add(tds.get(2).text());
-                            latarray.add(tds.get(1).text());
-                        }
-
-                    }
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-
-        }
-        public void onPostExecute(Void result) {
-            Bundle bundle=new Bundle();
-            bundle.putString("name", "From Activity");
-            receive fragobj=new receive();
-            fragobj.setArguments(bundle);
-            fm.beginTransaction().replace(R.id.fragment_container, new receive()).commit();
-        }
-    }
 }
