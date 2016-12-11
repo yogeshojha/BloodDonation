@@ -22,6 +22,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -36,6 +37,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class receive extends Fragment implements OnMapReadyCallback {
+
     public LatLng marker;
     public TextView txt;
     private String URL = "http://kyampus.in/blood/loc.php";
@@ -116,8 +118,7 @@ public class receive extends Fragment implements OnMapReadyCallback {
         {
             Marker marker = googleMap.addMarker(new MarkerOptions()
                     .position(new LatLng(Double.parseDouble(latarray.get(i)), Double.parseDouble(lngarray.get(i))))
-                    .title("San Francisco")
-                    .snippet("Population: 776733"));
+                    .title("San Francisco").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_room)));
         }
     }
 }
