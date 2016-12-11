@@ -37,12 +37,13 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class receive extends Fragment implements OnMapReadyCallback {
-
+    public TextView tvLat;
     public LatLng marker;
     public TextView txt;
     private String URL = "http://kyampus.in/blood/loc.php";
     public final ArrayList<String> latarray = new ArrayList<String>();
     public final ArrayList<String> lngarray = new ArrayList<String>();
+    public final ArrayList<String> namearray = new ArrayList<String>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -83,6 +84,7 @@ public class receive extends Fragment implements OnMapReadyCallback {
                         if (tds.size() >= 1) {
                             lngarray.add(tds.get(2).text());
                             latarray.add(tds.get(1).text());
+                            namearray.add("Name: "+ tds.get(3).text() + "\nEmail: HIDDEN\nPhone: HIDDEN\nBlood Type:"+tds.get(7).text());
                         }
 
                     }
@@ -94,10 +96,10 @@ public class receive extends Fragment implements OnMapReadyCallback {
 
         }
         public void onPostExecute(Void result) {
-            receive.this.postmarkers(latarray,lngarray);
+            receive.this.postmarkers(latarray,lngarray,namearray);
         }
     }
-    public void postmarkers(ArrayList latarray, ArrayList lngarray)
+    public void postmarkers(ArrayList latarray, ArrayList lngarray, ArrayList namearray)
     {
         MapFragment fragment = (MapFragment)getChildFragmentManager().findFragmentById(R.id.map);
         fragment.getMapAsync(this);
@@ -112,13 +114,58 @@ public class receive extends Fragment implements OnMapReadyCallback {
         }
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
+        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
+            // Use default InfoWindow frame
+            @Override
+            public View getInfoWindow(Marker arg0) {
+                return null;
+            }
+
+            // Defines the contents of the InfoWindow
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View va = getActivity().getLayoutInflater().inflate(R.layout.windowlayout, null);
+                tvLat = (TextView) va.findViewById(R.id.tv_lat);
+                for(int i = 1; i < namearray.size(); i++ ) {
+                    tvLat.setText(namearray.get(i));
+                }
+                return va;
+
+            }
+        });
+        // Adding and showing marker while touching the GoogleMap
+        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            GoogleMap googleMap;
+            @Override
+            public void onMapClick(LatLng arg0) {
+                // Clears any existing markers from the GoogleMap
+                googleMap.clear();
+
+                // Creating an instance of MarkerOptions to set position
+                MarkerOptions markerOptions = new MarkerOptions();
+
+                // Setting position on the MarkerOptions
+                markerOptions.position(arg0);
+
+                // Animating to the currently touched position
+                googleMap.animateCamera(CameraUpdateFactory.newLatLng(arg0));
+
+                // Adding marker on the GoogleMap
+                Marker marker = googleMap.addMarker(markerOptions);
+
+                // Showing InfoWindow on the GoogleMap
+                marker.showInfoWindow();
+
+            }
+        });
         int size = latarray.size();
         for (int i = 0; i < size; i++)
         {
             Marker marker = googleMap.addMarker(new MarkerOptions()
                     .position(new LatLng(Double.parseDouble(latarray.get(i)), Double.parseDouble(lngarray.get(i))))
-                    .title("San Francisco").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_room)));
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_action_room)));
+
         }
     }
 }
